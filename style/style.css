@@ -3,19 +3,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: #f3f5fc;
-  min-height: 100vh;
-  height: 1024px;
+
   flex-grow: 1;
 }
 
 .container {
   margin: 40px;
   display: flex;
+
   flex-direction: column;
   justify-content: space-round;
 }
 
 .main {
+  min-height: 100vh;
+  height: 1024px;
   height: 100%;
   flex-direction: row;
 }
