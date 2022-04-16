@@ -55,6 +55,10 @@ body {
   color: #0a3871;
 }
 
+.text-input {
+  margin-top: 80px;
+}
+
 #text-area {
   font-weight: 400;
   font-style: normal;
@@ -149,4 +153,37 @@ body {
 .aside-copy {
   background-color: transparent;
   color: #0a3871;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+.media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.media a {
+  text-decoration: none;
+  font-size: 50px;
+  margin: 5px;
+  color: #0a3871;
+}
+.signature {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #0a3871;
+}
+
+.signature p {
+  margin: 0px;
+  padding: 0px;
+  font-style: "Inter", "sans-serif";
+  font-style: italic;
+  font-size: 16px;
 }
