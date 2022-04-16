@@ -101,4 +101,52 @@ body {
 .output {
   flex: 1;
   margin: 0px;
+  height: 954px;
+  width: 400px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  height: 100%;
+}
+
+.aside-content {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.aside-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aside-message {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.aside-button {
+  visibility: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.aside-copy {
+  background-color: transparent;
+  color: #0a3871;
 }
