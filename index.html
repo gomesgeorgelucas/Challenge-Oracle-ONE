@@ -5,13 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
     <link rel="stylesheet" href="./style/style.css" />
     <title>Decodificador de Texto</title>
   </head>
   <body>
-    <header></header>
-    <section></section>
-    <footer></footer>
+    <div class="container main">
+      <div class="container input">
+        <header class="header">
+          <div class="logo">
+            <img
+              src="./assets/img/logo.svg"
+              alt="logo Alura letra a minúscula cursiva"
+            />
+          </div>
+        </header>
+        <section class="principal">
+          <section class="text-input">
+            <textarea
+              name="text-area"
+              id="text-area"
+              placeholder="Digite seu texto..."
+              required
+            ></textarea>
+          </section>
+          <section class="buttons">
+            <button class="button crypt">Criptografar</button>
+            <button class="button decrypt">Descriptografar</button>
+          </section>
+        </section>
+      </div>
+      <div class="container output">
+        <aside class="aside">aside</aside>
+      </div>
+    </div>
+    <div class="container"><footer class="footer">footer</footer></div>
+
+    <script src="./src/textarea-resize.js"></script>
     <script src="./src/script.js"></script>
   </body>
 </html>
