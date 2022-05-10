@@ -58,21 +58,49 @@ console.assert(
   "Encryption or Decryption not working."
 );
 
-let encryptButton = document.getElementById("encrypt-button");
+var encryptButton = document.getElementById("encrypt-button");
+var decryptButton = document.getElementById("decrypt-button");
+var decodedCopyButton = document.getElementById("decoded-copy");
 
-let decryptButton = document.getElementById("decrypt-button");
+var decodedImg = document.getElementById("decoded-img");
+var decodedMessage = document.getElementById("decoded-message");
+
+var textAreaInput = document.getElementById("text-area");
+//let decodedMessageResult = document.getElementById("decoded-message-result");
+
+var decodedMessageResultText = document.getElementById(
+  "decoded-message-result-text"
+);
+function updateHTML(text) {
+  if (text.trim() !== "") {
+    decodedImg.remove();
+    decodedMessage.remove();
+    decodedMessageResultText.style = "visibility:visible";
+    decodedMessageResultText.value = text;
+    decodedMessageResultText.dispatchEvent(new Event("input"));
+    decodedCopyButton.style = "visibility:visible";
+  }
+}
 
 function encryptButtonOnClick() {
-  let textAreaInput = document.getElementById("text-area").value;
-  console.log(encrypt(textAreaInput));
-  return encrypt(textAreaInput);
+  console.log(encrypt(textAreaInput.value));
+  let textEncrypted = encrypt(textAreaInput.value);
+  updateHTML(textEncrypted);
+  return textEncrypted;
 }
 
 function decryptButtonOnClick() {
-  let textAreaInput = document.getElementById("text-area").value;
-  console.log(decrypt(textAreaInput));
-  return decrypt(textAreaInput);
+  console.log(decrypt(textAreaInput.value));
+  let textDecrypted = decrypt(textAreaInput.value);
+  updateHTML(textDecrypted);
+  return textDecrypted;
 }
 
 encryptButton.onclick = encryptButtonOnClick;
 decryptButton.onclick = decryptButtonOnClick;
+decodedCopyButton.onclick = () => {
+  var copiedText = decodedMessageResultText;
+  copiedText.select();
+  copiedText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copiedText.value);
+};
