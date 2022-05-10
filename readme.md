@@ -9,4 +9,6 @@
 
 - [x] Fix: Logo must be on a separate container - in total 3 containers (logo, main, aside) flex direction row
 
-- [ ] Fix: Center image on decoder side
+- [x] Fix: Center image on decoder side
+
+- [ ] Fix footer

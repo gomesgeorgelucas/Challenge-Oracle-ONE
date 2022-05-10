@@ -19,7 +19,6 @@
     <title>Decodificador de Texto</title>
   </head>
   <body>
-    <header></header>
     <main>
       <section class="logo">
         <img
@@ -34,11 +33,17 @@
           placeholder="Digite seu texto..."
           required
         ></textarea>
-        <div class="buttons">
-          <button id="encrypt-button" class="button crypt">Criptografar</button>
-          <button id="decrypt-button" class="button decrypt">
-            Descriptografar
-          </button>
+
+        <div id="group-button-text" class="container">
+          <p id="warning-text">Apenas letras minúsculas e sem acento.</p>
+          <div class="buttons">
+            <button id="encrypt-button" class="button crypt">
+              Criptografar
+            </button>
+            <button id="decrypt-button" class="button decrypt">
+              Descriptografar
+            </button>
+          </div>
         </div>
       </section>
       <section id="decoded-section" class="container">
@@ -57,13 +62,13 @@
         <div id="decoded-message" class="decoded-message">
           <h1>Nenhuma mensagem encontrada</h1>
           <p>
-            Digite um texto que você deseja <br />
-            criptografar ou descriptografar.
+            Digite um texto que você deseja criptografar ou descriptografar.
           </p>
         </div>
         <button id="decoded-copy" class="button">Copiar</button>
       </section>
     </main>
+    <!--
     <footer>
       <div class="media">
         <div class="github">
@@ -85,7 +90,7 @@
         <p>by George Lucas Gomes</p>
       </div>
     </footer>
-
+  -->
     <script src="./src/textarea-resize.js"></script>
     <script src="./src/script.js"></script>
   </body>

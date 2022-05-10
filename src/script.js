@@ -66,19 +66,20 @@ var decodedImg = document.getElementById("decoded-img");
 var decodedMessage = document.getElementById("decoded-message");
 
 var textAreaInput = document.getElementById("text-area");
-//let decodedMessageResult = document.getElementById("decoded-message-result");
+let decodedMessageResult = document.getElementById("decoded-message-result");
 
 var decodedMessageResultText = document.getElementById(
   "decoded-message-result-text"
 );
 function updateHTML(text) {
   if (text.trim() !== "") {
-    decodedImg.remove();
-    decodedMessage.remove();
+    decodedImg.style = "display:none";
+    decodedMessage.style = "display:none";
+    decodedMessageResult.style = "display : contents";
     decodedMessageResultText.style = "visibility:visible";
     decodedMessageResultText.value = text;
     decodedMessageResultText.dispatchEvent(new Event("input"));
-    decodedCopyButton.style = "visibility:visible";
+    decodedCopyButton.style = "display:block";
   }
 }
 
