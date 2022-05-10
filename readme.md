@@ -7,4 +7,6 @@
 
 ### To-Do
 
-- [ ] Fix: Logo must be on a separate container - in total 3 containers (logo, main, aside) flex direction row
+- [x] Fix: Logo must be on a separate container - in total 3 containers (logo, main, aside) flex direction row
+
+- [ ] Fix: Center image on decoder side
